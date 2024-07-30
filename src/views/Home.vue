@@ -325,30 +325,30 @@ watchEffect(()=>{
               <li class="top-[0vw] left-[25vw] absolute invisible schedule-list">
                 <div class="font-baskervville text-[1.25vw] text-gray-400 italic">6.00 AM</div>
                 <div class="font-sriracha text-[2vw]">กินข้าว</div>
-                <div class="font-baskervville text-[1vw] w-[10vw]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, illum soluta explicabo sit asperiores fuga , consectetur omnis?</div>
+                <div class="font-baskervville text-[.5vw] w-[10vw]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, illum soluta explicabo sit asperiores fuga , consectetur omnis?</div>
               </li>
               <li class="top-[10vw] left-[45vw] absolute invisible schedule-list">
                 <div class="font-baskervville text-[1.25vw] text-gray-400 italic">7.00 AM</div>
                 <div class="font-sriracha text-[2vw]">ดำน้ำ</div>
-                <div class="font-baskervville text-[1vw] w-[10vw]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, illum soluta explicabo sit asperiores fuga , consectetur omnis?</div>
+                <div class="font-baskervville text-[.5vw] w-[10vw]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, illum soluta explicabo sit asperiores fuga , consectetur omnis?</div>
 
               </li>
               <li class="top-[20vw] left-[65vw] absolute invisible schedule-list">
                 <div class="font-baskervville text-[1.25vw] text-gray-400 italic">10.00 AM</div>
                 <div class="font-sriracha text-[2vw]">ปลูกต้นไม้</div>
-                <div class="font-baskervville text-[1vw] w-[10vw]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, illum soluta explicabo sit asperiores fuga , consectetur omnis?</div>
+                <div class="font-baskervville text-[.5vw] w-[10vw]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, illum soluta explicabo sit asperiores fuga , consectetur omnis?</div>
 
               </li>
               <li class="top-[30vw] left-[45vw] absolute invisible schedule-list">
                 <div class="font-baskervville text-[1.25vw] text-gray-400 italic">11.00 AM</div>
-                <div class="font-sriracha text-[2vw]">ทอดชะอม</div>
-                <div class="font-baskervville text-[1vw] w-[10vw]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, illum soluta explicabo sit asperiores fuga , consectetur omnis?</div>
+                <div class="font-sriracha text-[2vw]">หัวข้อ 1</div>
+                <div class="font-baskervville text-[.5vw] w-[10vw]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, illum soluta explicabo sit asperiores fuga , consectetur omnis?</div>
 
               </li>
               <li class="top-[40vw] left-[25vw] absolute invisible schedule-list">
                 <div class="font-baskervville text-[1.25vw] text-gray-400 italic">12.30 AM</div>
-                <div class="font-sriracha text-[2vw]">ว้าว</div>
-                <div class="font-baskervville text-[1vw] w-[10vw]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, illum soluta explicabo sit asperiores fuga , consectetur omnis?</div>
+                <div class="font-sriracha text-[2vw]">หัว</div>
+                <div class="font-baskervville text-[.5vw] w-[10vw]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, illum soluta explicabo sit asperiores fuga , consectetur omnis?</div>
 
               </li>
             </ul>
