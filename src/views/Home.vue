@@ -188,6 +188,8 @@ onMounted(() => {
     ScrollTrigger.refresh()
   }, 3000);
 
+  scrolled.value = false
+
 })
 
 
@@ -268,6 +270,10 @@ const scrollStart = ()=> {
     scrollTo: parallaxTrigger.value
   });
 }
+const scrolled = ref(true)
+window.onscroll = function (e) {  
+   scrolled.value = true;
+} 
 
 
 
@@ -277,7 +283,7 @@ const scrollStart = ()=> {
 </script>
 <template>
   <div class=" font-baskervville fixed top-0 left-0 w-[.25vw] bg-lime-950 progress-scroll z-50"></div>
-  <div class=" font-baskervville fixed top-4 right-4 z-50 ">10 / 11 / 24</div>
+  <div class=" font-baskervville fixed top-4 right-4 z-50 ">10 / 11</div>
 
   <div class=" h-[100vh] bg-slate-100 flex justify-center items-center  relative  overflow-hidden">
     <div class="flex flex-col text-6xl text-lime-950 title-header  md:absolute left-[30vw] z-10" ref="parallaxTitleTarget">
@@ -353,10 +359,12 @@ const scrollStart = ()=> {
     <div class="w-[100vh] h-fit  absolute left-0 top-0 opacity-15 landing-image">
       <img src="../../public/flower-pee.png" class="  w-full">
     </div>
-    <div @click="scrollStart()" class="absolute bottom-20 z-10 font-baskervville cursor-pointer flex items-center gap-4">
+    <Transition name="slide-fade">
+    <div @click="scrollStart()" v-if="!scrolled" class="absolute bottom-20 z-10 font-baskervville cursor-pointer flex items-center gap-4">
       <div class="text-xs">Scroll down</div>
       <img class="w-[3vw]" src="../../public/down-arrow.png">
     </div>
+  </Transition>
   </div>
 
 
@@ -404,12 +412,12 @@ const scrollStart = ()=> {
       <div class="font-baskervville bg-lime-950 gap-4 venue-line w-[0.1rem] h-20 mx-auto mt-4 invisible"></div>
       <div class="mt-12 venue-text-left invisible">
         <div class="font-baskervville text-xs text-gray-400">The Venue</div>
-        <div class="font-baskervville text-base font-semibold md:w-[40vw]">Soi Klong Li Tawan-OK 71 , Klong Si , 12120
+        <div class="font-baskervville text-[2vw] font-semibold md:w-[40vw]">Soi Klong Li Tawan-OK 71 , Klong Si , 12120
           Klong Luang , Pathum Thani, 12120</div>
 
       </div>
       <div class="my-12 venue-text-right invisible flex justify-end">
-        <div class="font-baskervville text-xs font-normal text-end md:w-[40vw] "> We encourage carpooling to reduce
+        <div class="font-baskervville text-[1.25vw] font-normal text-end md:w-[40vw] "> We encourage carpooling to reduce
           parking congestion and environmental impact. If you would like to carpool, please let us know, and we can help
           coordinate rides with other guests.</div>
 
@@ -493,8 +501,8 @@ const scrollStart = ()=> {
     <div class="flex flex-col font-baskervville text-lime-950 text-4xl  self-center">
       <div class="text-base text-slate-500">RSVP</div>
       <div class="text-base bg-slate-500 w-8 h-1 my-4 opacity-40"> </div>
-      <div class="text-4xl font-semibold underline">Link 1</div>
-      <div class="text-4xl font-semibold underline">Link 2</div>
+      <div class="text-[3vw] font-semibold underline">Link 1</div>
+      <div class="text-[3vw] font-semibold underline">Link 2</div>
     </div>
 
   </div>
@@ -502,6 +510,21 @@ const scrollStart = ()=> {
 
 </template>
 <style scoped>
+
+.slide-fade-enter-active{
+  transition: all 0.8s ease-out ;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s ease-out ;
+}
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+
 .animate-name path:first-child {
   stroke-dasharray: 229;
   stroke-dashoffset: 229;
