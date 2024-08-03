@@ -16,7 +16,11 @@
 
 body{
   background: #f1f5f9;
-  overflow: hidden;
+  
+}
+
+::-webkit-scrollbar{
+  display: none;
 }
 
 
