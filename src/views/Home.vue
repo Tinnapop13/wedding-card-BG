@@ -259,8 +259,25 @@ watchEffect(() => {
       }
     }
   })
+})
 
-
+const parallaxScheduleLeft = ref(null)
+const timelineFourth = ref(null)
+watchEffect(() => {
+  timelineFourth?.value?.kill()
+  const y = width.value * -0.05
+  const setY = gsap.quickSetter(parallaxScheduleLeft.value, "y", "px")
+  timelineFourth.value = gsap.timeline({
+    scrollTrigger: {
+      trigger: parallaxScheduleLeft.value,
+      scrub: true,
+      start: "top bottom",
+      end: "bottom top",
+      onUpdate: (e) => {
+        setY(e.progress * y)
+      }
+    }
+  })
 })
 
 const scrollStart = ()=> {
@@ -360,9 +377,9 @@ window.onscroll = function (e) {
       <img src="../../public/flower-pee.png" class="  w-full">
     </div>
     <Transition name="slide-fade">
-    <div @click="scrollStart()" v-if="!scrolled" class="absolute bottom-20 z-10 font-baskervville cursor-pointer flex items-center gap-4">
+    <div @click="scrollStart()" v-if="!scrolled" class="absolute bottom-20 z-10 font-baskervville cursor-pointer flex items-center gap-2">
       <div class="text-xs">Scroll down</div>
-      <img class="w-[3vw]" src="../../public/down-arrow.png">
+      <img class="w-[2.5vw]" src="../../public/down-arrow.png">
     </div>
   </Transition>
   </div>
@@ -444,13 +461,13 @@ window.onscroll = function (e) {
         class="font-baskervville m-12 mt-0 gap-4 flex flex-col justify-center items-center text-[1.5vw] text-center w-[60vw] invisible schedule-list">
         Below is the schedule for our wedding day, including the ceremony, reception, and other key events. Please make
         sure to arrive on time so you don't miss any of the festivities. We look forward to celebrating with you!</div>
-      <div class="font-baskervville bg-lime-950 gap-4 w-[4vw] h-[.2rem] mx-auto mt-4 invisible schedule-line"></div>
+      <div class="font-baskervville bg-lime-950 gap-4 w-[6vw] h-[.1rem] mx-auto mt-4 invisible schedule-line"></div>
     </div>
   </div>
 
   <div class="relative w-full h-fit md:h-[100vw]  section flex flex-col gap-4 p-4 justify-center items-center z-0 overflow-hidden my-8">
-    <div class="top-1/3 left-0 w-[20vw] absolute invisible schedule-list">
-      <img src="../../public/flower-schedule-left.png">
+    <div class="bottom-1/3 left-0 w-[50vw] absolute invisible schedule-list " >
+      <img src="../../public/ladigocomplete-1.png" class="opacity-30" ref="parallaxScheduleLeft">
     </div>
     <div class="top-[0vw] left-[25vw] md:absolute invisible schedule-list max-md:flex flex-col ">
       <div class="font-baskervville text-[1.25vw] text-gray-400 italic ">6.00 AM</div>
