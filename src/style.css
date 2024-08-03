@@ -12,8 +12,11 @@
   font-family: "Sriracha", cursive;
 }
 
+
+
 body{
   background: #f1f5f9;
+  overflow: hidden;
 }
 
 

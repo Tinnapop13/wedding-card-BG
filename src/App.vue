@@ -1,4 +1,6 @@
 <script setup>
+ gsap.registerPlugin(ScrollToPlugin);
+ gsap.registerPlugin(ScrollTrigger);
 const lenis = new Lenis()
 
 function raf(time) {
