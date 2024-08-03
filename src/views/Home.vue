@@ -300,7 +300,11 @@ window.onscroll = function (e) {
 </script>
 <template>
   <div class=" font-baskervville fixed top-0 left-0 w-[.25vw] bg-lime-950 progress-scroll z-50"></div>
-  <div class=" font-baskervville fixed top-4 right-4 z-50 ">10 / 11</div>
+  <div class=" font-baskervville fixed top-4 right-4 z-50 flex flex-col">
+    <div>10</div>
+    <div>/</div>
+    <div>11</div>
+  </div>
 
   <div class=" h-[100vh] bg-slate-100 flex justify-center items-center  relative  overflow-hidden">
     <div class="flex flex-col text-6xl text-lime-950 title-header  md:absolute left-[30vw] z-10" ref="parallaxTitleTarget">
@@ -367,7 +371,7 @@ window.onscroll = function (e) {
           d="M27.875 45.5L54.3125 19.25C56.9375 16.6667 58.5625 14.9167 59.1875 14C59.8542 13.0417 60.1875 12 60.1875 10.875C60.1875 8.83333 59.1875 7.29167 57.1875 6.25C56.1458 5.75 54.3958 5.375 51.9375 5.125V3.6875H78.875V5.125C77.0417 5.29167 75.5 5.60417 74.25 6.0625C73.0417 6.47917 71.7083 7.20833 70.25 8.25C68.625 9.41667 65.8333 11.8958 61.875 15.6875L41.625 35.125L70.4375 71.875L74 76.4375C76.625 79.6875 79.3542 82.2292 82.1875 84.0625C83.8958 85.1875 85.3958 86 86.6875 86.5C87.9792 86.9583 89.6042 87.3125 91.5625 87.5625V89H50.25V87.5625C53.375 87.3125 55.625 86.7917 57 86C58.375 85.2083 59.0625 84.0417 59.0625 82.5C59.0625 80.8333 58.2083 78.7083 56.5 76.125C55.6667 74.875 54.1042 72.7083 51.8125 69.625C49.5208 66.5417 47.5833 64.0417 46 62.125L31.9375 44.6875L27.875 48.6875V69.375C27.875 73.625 28.1042 76.7917 28.5625 78.875C29.0625 80.9167 29.9583 82.6042 31.25 83.9375C32.375 85.1042 33.6667 85.9792 35.125 86.5625C36.625 87.1042 38.5833 87.4375 41 87.5625V89H1.0625V87.5625C3.47917 87.4375 5.41667 87.1042 6.875 86.5625C8.375 85.9792 9.6875 85.1042 10.8125 83.9375C12.1458 82.6042 13.0417 80.9167 13.5 78.875C13.9583 76.8333 14.1875 73.6667 14.1875 69.375V23.3125C14.1875 19.0208 13.9583 15.8542 13.5 13.8125C13.0417 11.7708 12.1458 10.0833 10.8125 8.75C9.6875 7.54167 8.375 6.66667 6.875 6.125C5.375 5.58333 3.4375 5.25 1.0625 5.125V3.6875H41V5.125C38.625 5.25 36.6875 5.58333 35.1875 6.125C33.7292 6.66667 32.4167 7.54167 31.25 8.75C29.9583 10.0833 29.0625 11.7917 28.5625 13.875C28.1042 15.9167 27.875 19.0625 27.875 23.3125V45.5Z"
           stroke="#1A2E05" />
       </svg>
-      <div class="font-baskervville name-text text-xl text-center invisible">November 10 , 2024</div>
+      <div class="font-baskervville  text-xl text-center puff-in-hor ">November 10 , 2024</div>
       
 
     </div>
@@ -527,6 +531,22 @@ window.onscroll = function (e) {
 
 </template>
 <style scoped>
+.puff-in-hor {
+	animation: puff-in-hor 2s ease-out both;
+}
+
+@keyframes puff-in-hor {
+  0% {
+    transform: scaleX(0);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
 
 .slide-fade-enter-active{
   transition: all 0.8s ease-out ;
