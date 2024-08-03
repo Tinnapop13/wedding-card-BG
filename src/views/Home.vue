@@ -412,12 +412,12 @@ window.onscroll = function (e) {
       <div class="font-baskervville bg-lime-950 gap-4 venue-line w-[0.1rem] h-20 mx-auto mt-4 invisible"></div>
       <div class="mt-12 venue-text-left invisible">
         <div class="font-baskervville text-xs text-gray-400">The Venue</div>
-        <div class="font-baskervville text-[2vw] font-semibold md:w-[40vw]">Soi Klong Li Tawan-OK 71 , Klong Si , 12120
+        <div class="font-baskervville text-sm font-semibold w-[50vw]  md:w-[40vw]">Soi Klong Li Tawan-OK 71 , Klong Si , 12120
           Klong Luang , Pathum Thani, 12120</div>
 
       </div>
       <div class="my-12 venue-text-right invisible flex justify-end">
-        <div class="font-baskervville text-[1.25vw] font-normal text-end md:w-[40vw] "> We encourage carpooling to reduce
+        <div class="font-baskervville text-xs font-normal text-end  md:w-[40vw] "> We encourage carpooling to reduce
           parking congestion and environmental impact. If you would like to carpool, please let us know, and we can help
           coordinate rides with other guests.</div>
 
