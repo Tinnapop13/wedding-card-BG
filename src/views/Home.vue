@@ -491,7 +491,7 @@ const scrollUp = ()=> {
     </div>
   </div>
 
-  <div class="relative w-full h-fit md:h-[100vw]  section flex flex-col gap-4 p-4 justify-center items-center z-0 overflow-hidden my-8">
+  <div class="relative w-full h-fit md:h-[100vw] section flex flex-col gap-4 p-4 justify-center items-center z-0 overflow-hidden my-8">
     <div class="bottom-1/3 left-0 w-[50vw] absolute invisible schedule-list" >
       <img src="../../public/ladigocomplete-1.png" class="opacity-30" ref="parallaxScheduleLeft">
     </div>
@@ -549,7 +549,7 @@ const scrollUp = ()=> {
             <div class="font-libre-baskerville text-base">November</div>
             <div class="font-libre-baskerville text-base">2024</div>
           </div>
-          <div class="h-[7rem] w-[0.1rem] bg-black"></div>
+          <div class="h-[7rem] w-[0.05rem] bg-black"></div>
           <div class="flex flex-col text-sm font-libre-baskerville">
             <div>06.29 น. พิธีสงฆ์</div>
             <div>08.09 น. พิธีแห่ขันหมาก</div>
