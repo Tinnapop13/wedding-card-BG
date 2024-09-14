@@ -537,9 +537,12 @@ const scrollUp = ()=> {
   <div class="h-fit bg-white z-0 footer flex justify-center items-center">
 
 
-    <div class="flex font-baskervville text-lime-950 text-4xl justify-evenly items-center w-full m-4 gap-2">
-      <div class="flex flex-col shadow-2xl h-fit rounded-lg p-4 gap-2 overflow-hidden">
-        <div class="flex items-center justify-evenly gap-2">
+    <div class="flex font-baskervville text-lime-950 text-4xl justify-evenly items-center w-full m-4 gap-4 max-md:flex-col relative">
+      <div @click="scrollUp()" class=" absolute text-sm right-0 bottom-0 cursor-pointer" >
+          Scroll up
+        </div>
+      <div class="flex flex-col shadow-lg h-fit rounded-lg p-4 gap-2 overflow-hidden flex-grow">
+        <div class="flex items-center justify-evenly gap-2 ">
           <div class="flex flex-col items-center text-[#AB8A29]">
             <div class="font-libre-baskerville text-base">Sunday</div>
             <div class="font-libre-baskerville text-6xl">10</div>
@@ -547,7 +550,7 @@ const scrollUp = ()=> {
             <div class="font-libre-baskerville text-base">2024</div>
           </div>
           <div class="h-[7rem] w-[0.1rem] bg-black"></div>
-          <div class="flex flex-col text-base font-libre-baskerville">
+          <div class="flex flex-col text-sm font-libre-baskerville">
             <div>06.29 น. พิธีสงฆ์</div>
             <div>08.09 น. พิธีแห่ขันหมาก</div>
             <div>10.09 น. พิธีหลั่งน้ำสงฆ์พระพุทธมนต์</div>
@@ -560,23 +563,22 @@ const scrollUp = ()=> {
         <div class="bg-black w-32 h-32 mx-auto">
           <img src="/public/qr_code.png">
         </div>
-        <div class="mx-auto">Location</div>
+        
       </div>
+      <div class="mx-auto inline-block text-xs">Location</div>
       <div class="flex mx-auto gap-4 ">
-        <div class="text-xl">Theme : </div>
         <div class="w-8 h-8 bg-[#E8BAAD] rounded-full"></div>
         <div class="w-8 h-8 bg-[#EDE2CE] rounded-full"></div>
         <div class="w-8 h-8 bg-[#BD8B70] rounded-full"></div>
       </div>
-        <div class="w-full h-full flex justify-end items-end text-sm " >
-          <p @click="scrollUp()" class="cursor-pointer">Scroll up</p>
-        </div>
+        
       </div>
       
-      <div class="flex flex-col w-[40%]">
+      <div class="flex flex-col flex-grow relative">
         <div class="font-semibold text-[2rem] text-[#AB8A29]">Bow & Gun Wedding</div>
         <div class="text-base">Development - Tinnapop Tienbang</div>
         <div class="text-slate-400 text-xs font-libre-baskerville">2024 © All Rights Reserved</div>
+        
       </div>
 
     </div>
